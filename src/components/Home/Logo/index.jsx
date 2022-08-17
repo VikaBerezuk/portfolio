@@ -1,47 +1,18 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap-trial';
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
 import LogoS from '../../../assets/images/logo.svg';
 import './index.scss';
+import {useOnScreen} from "../../hooks/useOnScreen";
 
 const Logo = () => {
-  const bgRef = useRef();
-  const outlineLogoRef = useRef();
-  const solidLogoRef = useRef();
+    const [refTitle, visibleTitle] = useOnScreen({threshold: 0.5});
 
-  useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin);
-
-    gsap
-      .timeline()
-      .to(bgRef.current, {
-        duration: 1,
-        opacity: 1,
-      })
-      .from(outlineLogoRef.current, {
-        drawSVG: 0,
-        duration: 20,
-      })
-
-    gsap.fromTo(
-      solidLogoRef.current,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        delay: 4,
-        duration: 4,
-      }
-    )
-  }, [])
     return (
-        <div className="logo-container" ref={bgRef}>
-            <img className="solid-logo" ref={solidLogoRef} src={LogoS} alt="JavaScript,  Developer"/>
-            <svg width="700px" height="700px" version="1.0" viewBox="0 0 559 897" xmlns="http://www.w3.org/2000/svg">
+        <div className="logo-container" ref={refTitle}>
+            <img style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '1.5s' : '0s'}}
+                 className="solid-logo" src={LogoS} alt="JavaScript,  Developer"/>
+            <svg style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '2.5s' : '0s'}}
+                 width="700px" height="700px" version="1.0" viewBox="0 0 559 897" xmlns="http://www.w3.org/2000/svg">
                 <g className="svg-container" transform="translate(0 457) scale(.3 -.3)" fill="none">
-                    <path ref={outlineLogoRef}
-                        d="M582 1444 c51 -84 356 -614 362 -629 7 -18 9 -17 23 11 l16 32 -138 238 c-76 132 -144 249
+                    <path d="M582 1444 c51 -84 356 -614 362 -629 7 -18 9 -17 23 11 l16 32 -138 238 c-76 132 -144 249
                         -151 261 -8 12 -14 26 -14 30 0 4 39 6 87 5 l88 -4 180 -314 c99 -173 181 -321 183 -329 3 -11 -56
                         -131 -75 -155 -5 -5 -12 6 -59 91 l-32 57 24 43 c23 39 24 45 11 71 l-14 29 -41 -71 -41 -70 70
                         -121 c38 -67 69 -125 69 -130 0 -5 5 -9 10 -9 6 0 10 5 10 11 0 6 31 64 69 129 l69 119 -34 57

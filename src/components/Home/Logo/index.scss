@@ -1,17 +1,11 @@
 .logo-container {
   z-index: 0;
-  width: 400px;
-  height: 609px;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 15%;
-  bottom: 0;
-  left: auto;
   margin: auto;
+  position: absolute;
+  right: 25%;
 
   svg {
-    width: 55vw;
+    width: 50vw;
     margin-left: -27vw;
     height: 184vh;
     bottom: 0;
@@ -20,12 +14,8 @@
 
   .solid-logo {
     position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
     width: 100%;
+    left: 10%;
     opacity: 0;
     transform: rotateZ(30deg) !important;
     z-index: 1;
