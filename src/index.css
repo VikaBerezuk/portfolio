@@ -11,8 +11,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: mediumpurple;
   text-rendering: optimizeLegibility;
- /* overflow: hidden;*/
+  overflow-x: hidden;
   display: block;
+}
+
+@media (min-width: 900px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 a{
