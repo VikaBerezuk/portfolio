@@ -18,12 +18,16 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_mvma2id', 'template-88oj78i', form.current, 'f8EFctF7goz_9OvOJ')
+    emailjs.sendForm('service_mvma2id', 'template_88oj78i',
+        e.target, 'f8EFctF7goz_9OvOJ')
         .then((result) => {
-          console.log(result.text);
+          console.log('email sent successfully', result);
+          alert('email sent successfully');
         }, (error) => {
-          console.log(error.text);
-        });
+          console.log('error sending email', error);
+          alert('error sending email');
+        });            //clears the form after sending the email
+    e.target.reset();
   };
 
   return (
