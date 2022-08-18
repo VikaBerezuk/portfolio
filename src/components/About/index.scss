@@ -1,12 +1,29 @@
+.about-page {
+  margin: 200px 20px 20px 85px;
+
+  @media (min-width: 530px) {
+    margin-top: 160px;
+  }
+
+  @media (min-width: 900px) {
+    margin: 0;
+  }
+}
+
 .stage-cube-cont {
   width: 50%;
   height: 100%;
   top: 0;
-  padding-top: 18%;
-  margin-left: 0;
-  position: absolute;
-  right: 0;
-  overflow: hidden;
+  margin-top: -40px;
+  margin-left: 10%;
+
+  @media (min-width: 900px) {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 13%;
+  }
 }
 
 .cubespinner {

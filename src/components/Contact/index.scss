@@ -1,3 +1,14 @@
+.contact-page {
+  margin: 280px 20px 10px 85px;
+  width: auto;
+
+  @media (min-width: 900px) {
+    margin: 0;
+    width: fit-content;
+    width: -moz-available;
+  }
+}
+
 .contact-form {
   width: 100%;
   margin-top: 20px;
@@ -8,9 +19,8 @@
 
     li {
       padding: 0;
-      margin: 0;
+      margin: 0 0 10px;
       list-style: none;
-      margin-bottom: 10px;
       opacity: 0;
       overflow: hidden;
       display: block;
@@ -74,10 +84,12 @@
 }
 
 .map-wrap {
-  float: right;
-  width: 53%;
-  height: 115%;
-  margin-top: -3%;
+  @media (min-width: 820px) {
+    float: right;
+    width: 53%;
+    height: 115%;
+    margin-top: -3%;
+  }
 }
 
 .leaflet-container {

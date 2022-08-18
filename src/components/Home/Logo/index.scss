@@ -3,13 +3,23 @@
   margin: auto;
   position: absolute;
   right: 25%;
+  display: none;
+
+  @media (min-width: 900px) {
+    display: block;
+  }
 
   svg {
+    display: none;
     width: 50vw;
     margin-left: -27vw;
     height: 184vh;
     bottom: 0;
     transform: rotateZ(30deg) !important;
+
+    @media (min-width: 900px) {
+      display: block;
+    }
   }
 
   .solid-logo {

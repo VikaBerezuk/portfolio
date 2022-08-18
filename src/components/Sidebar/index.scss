@@ -1,8 +1,8 @@
 .nav-bar {
+  position: fixed;
   background: #181818;
   width: 60px;
   height: 100%;
-  position: absolute;
   top: 0;
   z-index: 3;
   min-height: 500px;
@@ -123,7 +123,7 @@
         line-height: 16px;
         color: #4d4d4e;
 
-        &:hover {
+        svg:hover {
           color: white;
         }
       }
