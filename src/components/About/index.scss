@@ -1,29 +1,11 @@
-.about-page {
-  margin: 200px 20px 20px 85px;
-
-  @media (min-width: 530px) {
-    margin-top: 160px;
-  }
-
-  @media (min-width: 900px) {
-    margin: 0;
-  }
-}
-
 .stage-cube-cont {
   width: 50%;
   height: 100%;
   top: 0;
-  margin-top: -40px;
-  margin-left: 10%;
-
-  @media (min-width: 900px) {
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-    margin: 0;
-    padding-top: 13%;
-  }
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  padding-top: 13%;
 }
 
 .cubespinner {
@@ -94,5 +76,14 @@
   }
   83% {
     transform: rotateX(90deg);
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .stage-cube-cont {
+    position: initial;
+    width: 100%;
+    overflow: visible;
+    height: 70vh;
   }
 }

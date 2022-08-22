@@ -1,0 +1,77 @@
+@import "src/components/variables";
+
+.convector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  display: flex;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+
+.block {
+  margin: 0 10px;
+  input {
+    border: 1px solid $primary-color;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 20px 20px;
+    letter-spacing: 1.3px;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.currencies {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  overflow: hidden;
+
+  li {
+    flex: 1;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 20px;
+    color: $primary-color;
+    border-right: 1px solid;
+    cursor: pointer;
+    box-shadow: 0 0 1px 1px;
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    &:active {
+      background-color: $primary-color;
+    }
+
+    &.active {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+ .convector {
+   flex-direction: column;
+   margin: 10px auto;
+   width: 350px;
+ }
+
+  .block {
+    margin: 0 0 20px;
+  }
+}

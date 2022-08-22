@@ -1,13 +1,10 @@
+@import "src/components/variables";
+
 .logo-container {
   z-index: 0;
   margin: auto;
   position: absolute;
   right: 25%;
-  display: none;
-
-  @media (min-width: 900px) {
-    display: block;
-  }
 
   svg {
     display: none;
@@ -15,9 +12,9 @@
     margin-left: -27vw;
     height: 184vh;
     bottom: 0;
-    transform: rotateZ(30deg) !important;
+    transform: rotateZ(30deg);
 
-    @media (min-width: 900px) {
+    @media (min-width: 1200px) {
       display: block;
     }
   }
@@ -27,12 +24,12 @@
     width: 100%;
     left: 10%;
     opacity: 0;
-    transform: rotateZ(30deg) !important;
+   transform: rotateZ(30deg);
     z-index: 1;
   }
 }
 
 .svg-container {
-  stroke: purple;
+  stroke: $primary-color;
   stroke-width: 10;
 }

@@ -1,27 +1,51 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
   font: 300 11px/1.4 'Helvetica Neue', sans-serif;
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: mediumpurple;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow: hidden;
   display: block;
 }
 
-@media (min-width: 900px) {
-  body {
-    overflow: hidden;
-  }
+#light {
+  background: mediumpurple;
+  height: 100vh;
+}
+
+#dark {
+  background: black;
+  height: 100vh;
 }
 
 a{
   text-decoration: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px){
+  body {
+    overflow: visible;
+  }
+
+  #light {
+    height: 100%;
+  }
+
+  #dark {
+    height: 100%;
+  }
 }

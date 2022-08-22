@@ -1,26 +1,19 @@
-.home-page {
-  margin-top: 190px;
-  margin-left: 74px;
+@import "src/components/variables";
 
-  @media (min-width: 900px) {
-    margin: 0;
-  }
+.home-page {
 
   .text-zone {
     transform: translateY(-50%);
     max-height: 90%;
-
-    @media (min-width: 900px) {
-      width: 40%;
-      position: absolute;
-      left: 10%;
-      top: 50%;
-    }
+    width: 40%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
   }
 
   h1 {
     color: #fff;
-    font-size: 44px;
+    font-size: 35px;
     line-height: 53px;
     margin: 0;
     font-family: 'Coolvetica';
@@ -33,7 +26,7 @@
     &:before {
       content: '<h1>';
       font-family: 'La Belle Aurore', cursive;
-      color: purple;
+      color: $primary-color;
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -44,7 +37,7 @@
     &:after {
       content: '<h1/>';
       font-family: 'La Belle Aurore', cursive;
-      color: purple;
+      color: $primary-color;
       font-size: 18px;
       position: absolute;
       margin-top: 18px;
@@ -74,7 +67,7 @@
   }
 
   .flat-button {
-    color: black;
+    color: white;
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 4px;
@@ -86,10 +79,49 @@
     float: left;
     animation: fadeInAnimation 1s 1.8s backwards;
     white-space: nowrap;
+    box-shadow: 0 0 3px 1px;
 
     &:hover {
       background: black;
-      color: #333;
+      color: $primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tags, .home-page h1::before,
+  .home-page h1::after {
+    display: none;
+  }
+
+  .home-page {
+    .text-zone {
+      position: initial;
+      width: 100%;
+      transform: none;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .flat-button {
+      float: none;
+      display: block;
+      margin: 20px auto 0 auto;
+      width: 155px;
+    }
+
+    .logo-container {
+      position: initial;
+      height: 85vh;
+      margin: auto;
+      width: 100px;
+      box-sizing: border-box;
+
+      .solid-logo {
+        transform: none;
+        left: 0%;
+        width: 370px;
+      }
     }
   }
 }

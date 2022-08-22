@@ -2,11 +2,6 @@
   cursor: pointer;
   position: relative;
   margin: 8% auto;
-  display: none;
-
-  @media (min-width: 900px) {
-    display: block;
-  }
 }
 
 .tag-cloud__item {
@@ -18,4 +13,10 @@
   transform-origin: 50% 50%;
   transition: all 0.1s;
   will-change: transform, opacity, filter;
+}
+
+@media screen and (max-width: 1200px){
+  .tag-cloud {
+    margin: 0 auto;
+  }
 }

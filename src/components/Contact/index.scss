@@ -1,12 +1,9 @@
-.contact-page {
-  margin: 280px 20px 10px 85px;
-  width: auto;
+@import "src/components/variables";
 
-  @media (min-width: 900px) {
-    margin: 0;
-    width: fit-content;
-    width: -moz-available;
-  }
+.contact-page {
+  margin: 0;
+  width: fit-content;
+  width: -moz-available;
 }
 
 .contact-form {
@@ -46,7 +43,7 @@
   input[type='email'] {
     width: 100%;
     border: 0;
-    background: purple;
+    background: $primary-color;
     height: 50px;
     font-size: 16px;
     color: #fff;
@@ -57,7 +54,7 @@
   textarea {
     width: 100%;
     border: 0;
-    background: purple;
+    background: $primary-color;
     height: 50px;
     font-size: 16px;
     color: #fff;
@@ -67,12 +64,12 @@
   }
 
   .flat-button {
-    color: purple;
+    color: $primary-color;
     font-size: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid purple;
+    border: 1px solid $primary-color;
     border-radius: 4px;
     background: 0 0;
     text-transform: uppercase;
@@ -84,12 +81,10 @@
 }
 
 .map-wrap {
-  @media (min-width: 820px) {
-    float: right;
-    width: 53%;
-    height: 115%;
-    margin-top: -3%;
-  }
+  float: right;
+  width: 53%;
+  height: 115%;
+  margin-top: -3%;
 }
 
 .leaflet-container {
@@ -99,4 +94,12 @@
   opacity: 0;
   animation: backInRight 1s 1.2s;
   animation-fill-mode: forwards;
+}
+
+
+@media screen and (max-width: 1200px){
+  .map-wrap {
+    float: none;
+    height: 100%;
+  }
 }
