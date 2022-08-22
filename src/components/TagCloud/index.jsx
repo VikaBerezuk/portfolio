@@ -112,7 +112,7 @@ const TagCloud = memo(() => {
             const interval = setInterval(next, 100)
             return () => clearInterval(interval)
         }
-    }, [tagCloudRef])
+    },[tagCloudRef])
 
     return (
         <div
@@ -127,7 +127,7 @@ const TagCloud = memo(() => {
             }}
             style={{
                 position: 'relative',
-                width: `${2 * radius}px`,
+                width: '100%',
                 height: `${2 * radius}px`
             }}
         >

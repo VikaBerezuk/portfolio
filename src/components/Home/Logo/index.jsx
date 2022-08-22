@@ -1,6 +1,6 @@
 import LogoS from '../../../assets/images/logo.svg';
 import './index.scss';
-import {useOnScreen} from "../../hooks/useOnScreen";
+import {useOnScreen} from "../../../hooks/useOnScreen";
 
 const Logo = () => {
     const [refTitle, visibleTitle] = useOnScreen({threshold: 0.5});

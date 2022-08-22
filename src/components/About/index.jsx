@@ -1,31 +1,15 @@
-import { useEffect, useState } from 'react';
-import { faNode, faGitAlt, faHtml5, faJsSquare, faReact, faSass,
-} from '@fortawesome/free-brands-svg-icons';
+import { faNode, faGitAlt, faHtml5, faJsSquare, faReact, faSass } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
+import Title from "../Title";
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, []);
-
   return (
     <>
+      <Title strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}/>
       <div className="container about-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
-          </h1>
           <p>
             I'm very ambitious front-end developer looking for a role in
             established IT company with the opportunity to work with the latest
@@ -36,7 +20,6 @@ const About = () => {
             improving my chops one design problem at a time.
           </p>
         </div>
-
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
@@ -60,7 +43,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="pacman"  active/>
     </>
   )
 }

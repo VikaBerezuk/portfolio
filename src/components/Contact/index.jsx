@@ -1,19 +1,12 @@
-import { useEffect, useState, useRef } from 'react';
+import { useRef } from 'react';
 import Loader from 'react-loaders';
 import emailjs from '@emailjs/browser';
-import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import TagCloud from "../TagCloud";
+import Title from "../Title";
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
   const form = useRef();
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 3000)
-  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -32,15 +25,9 @@ const Contact = () => {
 
   return (
     <>
+      <Title  strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}/>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
-          </h1>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
@@ -67,7 +54,7 @@ const Contact = () => {
           <TagCloud />
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="pacman" active/>
     </>
   )
 }
