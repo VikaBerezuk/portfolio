@@ -1,4 +1,4 @@
-@import "src/components/variables";
+@import 'src/components/variables';
 
 .contact-page {
   margin: 0;
@@ -62,27 +62,11 @@
     box-sizing: border-box;
     min-height: 150px;
   }
-
-  .flat-button {
-    color: $primary-color;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-decoration: none;
-    padding: 8px 10px;
-    border: 1px solid $primary-color;
-    border-radius: 4px;
-    background: 0 0;
-    text-transform: uppercase;
-    float: right;
-    text-align: center;
-    margin-right: 10px;
-    cursor: pointer;
-  }
 }
 
 .map-wrap {
   float: right;
-  width: 53%;
+  width: 50%;
   height: 115%;
   margin-top: -3%;
 }

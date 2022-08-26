@@ -14,6 +14,7 @@ const Index = () => {
 
     const {data, isLoading } = useGetUsersQuery(users);
 
+    console.log(data)
     useEffect(()=> {
         setUsers(data?.data)
     }, [data]);

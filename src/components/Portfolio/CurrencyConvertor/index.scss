@@ -13,6 +13,19 @@
   border-radius: 15px;
 }
 
+#dark {
+  & .convector {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 3px 2px;
+  }
+
+  & .block input {
+    background: rgba(255, 255, 255, 0.9);
+    color: $primary-color;
+    box-shadow: 0 0 1px 1px;
+  }
+}
+
 .block {
   margin: 0 10px;
   input {
@@ -66,8 +79,10 @@
 
 @media screen and (max-width: 800px){
  .convector {
+   position: initial;
+   transform: none;
    flex-direction: column;
-   margin: 10px auto;
+   margin: 0 auto;
    width: 350px;
  }
 

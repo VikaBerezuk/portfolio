@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../Title/AnimatedLetters';
 import LogoTitle from '../../assets/images/logo.svg';
-import Logo from './Logo';
 import './index.scss';
+import Fox from "./Fox";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -48,7 +48,7 @@ const Home = () => {
               CONTACT ME
             </Link>
           </div>
-          <Logo/>
+          <Fox/>
         </div>
         <Loader type="pacman" active/>
       </>

@@ -2,8 +2,8 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import './index.scss';
 import Loader from "react-loaders";
-import TagCloud from "../TagCloud";
 import Title from "../Title";
+import Logo from "../Logo";
 
 const Portfolio = () => {
     return (
@@ -15,12 +15,12 @@ const Portfolio = () => {
                         <NavLink className="portfolio-link" to="/convector">
                             Currency convertor
                         </NavLink>
-                        {/*<NavLink className="portfolio-link" to="/whether">
+                        <NavLink className="portfolio-link" to="/whether">
                             Whether
-                        </NavLink>*/}
-                        {/*<NavLink className="portfolio-link" to="/photo">
+                        </NavLink>
+                        <NavLink className="portfolio-link" to="/photo">
                             Photo
-                        </NavLink>*/}
+                        </NavLink>
                         <NavLink className="portfolio-link" to="/user">
                             User
                         </NavLink>
@@ -32,9 +32,7 @@ const Portfolio = () => {
                         </NavLink>
                     </div>
                 </div>
-                <div className="map-wrap">
-                    <TagCloud />
-                </div>
+                <Logo />
             </div>
             <Loader type="pacman" active/>
         </>

@@ -1,14 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import './index.scss';
-import data from "./data";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAnglesLeft, faAnglesRight, faQuoteRight} from "@fortawesome/free-solid-svg-icons";
-import Loader from "react-loaders";
 import Title from "../../Title";
+import { useGetSliderQuery } from "../../../store/sliderApi";
+import Loader from "react-loaders";
 
 const Slider = () => {
-    const [people, setPeople] = useState(data);
+    const [people, setPeople] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const {data} = useGetSliderQuery();
+
+    useEffect(() => {
+        if (data) {
+            setPeople(data)
+        }
+    }, [data]);
 
     useEffect(() => {
         const lastIndex = people.length - 1;

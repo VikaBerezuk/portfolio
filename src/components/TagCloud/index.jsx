@@ -73,7 +73,7 @@ const TagCloud = memo(() => {
             Math.cos(b * l)
         ]
 
-        setItems((prev) => {
+        setItems(function (prev) {
             const items = prev.map(item => {
                 const rx1 = item.x
                 const ry1 = item.y * sc[1] + item.z * -sc[0]
@@ -101,18 +101,18 @@ const TagCloud = memo(() => {
                         filter: `alpha(opacity=${100 * alpha})`
                     }
                 }
+                return true;
             })
-
-            return items
+            return items;
         })
     }, [])
 
     useEffect(() => {
         if (tagCloudRef?.current) {
-            const interval = setInterval(next, 100)
-            return () => clearInterval(interval)
+            const interval = setInterval(next, 100);
+            return () => clearInterval(interval);
         }
-    },[tagCloudRef])
+    },[tagCloudRef, next])
 
     return (
         <div

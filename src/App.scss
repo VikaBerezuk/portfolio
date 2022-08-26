@@ -5,7 +5,7 @@ $primary-color: purple;
 
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+  src: url('./assets/fonts/HelveticaNeueCyr-Thin.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -50,10 +50,9 @@ input, textarea {
 
 .switch {
   position: absolute;
-
   display: inline-flex;
   right: 55px;
-  top: 18px;
+  top: 15px;
   z-index: 4;
   align-items: center;
 

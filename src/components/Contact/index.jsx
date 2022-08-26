@@ -11,15 +11,13 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_mvma2id', 'template_88oj78i',
-        e.target, 'f8EFctF7goz_9OvOJ')
+    emailjs.sendForm(process.env.serviceID || 'service_mvma2id', process.env.templateId || 'template_88oj78i',
+        e.target, process.env.publicKey || 'f8EFctF7goz_9OvOJ')
         .then((result) => {
-          console.log('email sent successfully', result);
           alert('email sent successfully');
         }, (error) => {
-          console.log('error sending email', error);
           alert('error sending email');
-        });            //clears the form after sending the email
+        });
     e.target.reset();
   };
 
@@ -43,10 +41,8 @@ const Contact = () => {
                 <li>
                   <textarea placeholder='Message' name='message' required></textarea>
                 </li>
-                <li>
-                  <input type='submit' className='flat-button' value='SEND' />
-                </li>
               </ul>
+              <input type='submit' className='flat-button' value='SEND' />
             </form>
           </div>
         </div>

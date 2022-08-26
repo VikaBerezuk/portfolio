@@ -16,8 +16,7 @@ const About = () => {
             technologies on challenging and diverse projects.
           </p>
           <p align='LEFT'>
-            I'm quietly confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            I'm quiet confident, naturally curious, and perpetually working on improving my skills.
           </p>
         </div>
         <div className='stage-cube-cont'>

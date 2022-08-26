@@ -75,7 +75,7 @@
   }
 
   h1 {
-    margin: 0;
+    margin-bottom: 15px;
   }
 
   ul {
@@ -93,6 +93,28 @@
       &:hover {
         border: 2px solid rgba(0, 0, 0, 0.3);
       }
+    }
+  }
+}
+
+#dark {
+  & .quiz {
+    box-shadow: 0 0 3px 2px;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+
+    &::before, &::after {
+      background: none;
+      box-shadow: 0 7px 3px -3px rgba(255, 255, 255, 0.6);
+    }
+
+    & ul li {
+      border: 1px solid;
+      box-shadow: 0 0 3px 1px;
+    }
+
+    & .progress {
+      background: black;
     }
   }
 }
